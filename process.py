@@ -4,6 +4,7 @@ import os
 import shutil
 import yaml
 import urllib.parse
+import argparse
 
 def find_all_video_files(path, extension="mkv"):
     print("Looking for video files in:", path)
@@ -28,7 +29,21 @@ def produce_frames(path, output_pattern, frames_per_second):
     subprocess.call(command.split(" "))
 
 def main():
-    videos_path = "videos"
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--input", "-i", help="The directory containing video files to process.")
+    parser.add_argument("--frames_per_second", "-f", help="How frequently to grab a frame in the video.")
+
+    args = parser.parse_args()
+
+    videos_path = args.input
+    frames_per_second = args.frames_per_second
+
+    if not videos_path:
+        parser.error("Must pass directory for input with --input or -i.")
+    if not frames_per_second:
+        parser.error("Must pass frames per second with --frames_per_second or -f.")
+
     if not os.path.exists(videos_path) and os.path.isdir("videos"):
         print("Error: folder 'videos' does not exist! Exiting...")
         exit(1)
@@ -45,10 +60,28 @@ def main():
         print("> mkdir images")
         os.makedirs(images_dir)
 
-    metadata = {}
+    frames_metadata_file = "frames.yaml"
+    frames_metadata = {}
+    if os.path.exists(frames_metadata_file):
+        with open(frames_metadata_file, "r") as f:
+            frames_metadata = yaml.safe_load(f)
+    
+    processing_metadata_file = "processing.yaml"
+    processing_metadata = {}
+    if os.path.exists(processing_metadata_file):
+        with open(processing_metadata_file, "r") as f:
+            processing_metadata = yaml.safe_load(f)
+    else:
+        processing_metadata['done'] = []
+
     for file in video_files:
         print("Processing file:", file)
-        video_name, extension = os.path.splitext(os.path.basename(file))
+        filename = os.path.basename(file)
+        video_name, extension = os.path.splitext(filename)
+
+        if filename in processing_metadata['done']:
+            print("File already processed! Skipping...")
+            continue
 
         video_name_split = video_name.split("_")
 
@@ -62,7 +95,7 @@ def main():
         # put frames in a staging location
         # let's us keep track of the output of a single produce_frames call
         out_location = os.path.join(staging_dir, out_pattern)
-        produce_frames(file, out_location, 14)
+        produce_frames(file, out_location, frames_per_second)
         
         frame_paths = glob.glob(os.path.join(staging_dir, "*"))
         
@@ -79,12 +112,19 @@ def main():
             frame_data = {}
             frame_data['name'] = epsiode_name
             frame_data['season'] = season
-            frame_data['epsiode'] = episode
+            frame_data['episode'] = episode
             frame_data['include'] = True
 
-            metadata[url_safe_frame_name] = frame_data
+            frames_metadata[url_safe_frame_name] = frame_data
         
-    open("frames.yaml", "w").write(yaml.safe_dump(metadata))
+        processing_metadata['done'].append(filename)
+        processing_metadata[filename] = {}
+        processing_metadata[filename]['fps'] = frames_per_second
+
+    with open(frames_metadata_file, "w") as f:
+        f.write(yaml.safe_dump(frames_metadata))
+    with open(processing_metadata_file, "w") as f:
+        f.write(yaml.safe_dump(processing_metadata))
 
 if __name__ == "__main__":
     main()
