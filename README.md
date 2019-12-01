@@ -1,4 +1,4 @@
-# communityscreens
+# Community Screencaps
 
 Twitter Bot that posts screenshots from all 6 seasons of Community every 2 hours: [https://twitter.com/Community_Caps](https://twitter.com/Community_Caps)
 
@@ -32,6 +32,6 @@ Details:
   name: Pilot
   include: true
 ```
-one entry is included for each file in `images/`.
+One entry is included for each file in `images/`.
 
 `publish.py` uses the `tweepy` Python package to publish individual frames to our [Twitter page](https://twitter.com/Community_Caps). It uses the contents of `frames.yaml` to select an image at random from `images/`. It then builds a tweet using the image selected and its associated metadata from `frames.yaml` and pushes it to Twitter.
