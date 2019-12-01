@@ -34,4 +34,4 @@ Details:
 ```
 one entry is included for each file in `images/`.
 
-`publish.py` uses the `tweepy` Python package to publish individual frames to our [Twitter page](https://twitter.com/Community_Caps). It uses the contents fo `frames.yaml` to select an image at random from `images/`. It then builds a tweet using the image selected and its associated metadata from `frames.yaml` and pushes it to Twitter.
+`publish.py` uses the `tweepy` Python package to publish individual frames to our [Twitter page](https://twitter.com/Community_Caps). It uses the contents of `frames.yaml` to select an image at random from `images/`. It then builds a tweet using the image selected and its associated metadata from `frames.yaml` and pushes it to Twitter.
