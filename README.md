@@ -17,7 +17,7 @@ python -m pip install -r requirements.txt
 
 Example usage:
 ```
-python process.py --input=videos/ --output=images/ --frames-per-second=14 --remote_url=https://jacobysuh.gitlab.io/community/images"
+python process.py --input=videos/ --output=images/ --frames-per-second=14 --remote_url=https://jacobysuh.gitlab.io/community/images
 ```
 
 Details:
