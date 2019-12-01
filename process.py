@@ -54,8 +54,8 @@ def main():
     if not remote_url:
         parser.error("Must pass remote url for images with --remote_url or -u")
 
-    if not os.path.exists(input_path) and os.path.isdir("videos"):
-        print("Error: folder 'videos' does not exist! Exiting...")
+    if not os.path.exists(input_path) and os.path.isdir(input_path):
+        print(f"Error: folder {input_path} does not exist! Exiting...")
         exit(1)
     
     video_files = find_all_video_files(input_path)
@@ -84,7 +84,7 @@ def main():
     else:
         processing_metadata['done'] = []
 
-    for file in video_files[:1]:
+    for file in video_files:
         print("Processing file:", file)
         filename = os.path.basename(file)
         video_name, extension = os.path.splitext(filename)
