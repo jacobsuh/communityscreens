@@ -24,9 +24,9 @@ def find_all_video_files(path, extension="mkv"):
         return mkv_video_files + sum(video_files_in_folders, [])
 
 def produce_frames(path, output_pattern, frames_per_second):
-    command = f"ffmpeg -i {path} -vf fps=1/{frames_per_second} {output_pattern}"
-    print(">", command)
-    subprocess.call(command.split(" "))
+    command = ["ffmpeg", "-i", path, "-vf", f"fps=1/{frames_per_second}", output_pattern]
+    print(">", " ".join(command))
+    subprocess.call(command)
 
 def main():
     parser = argparse.ArgumentParser()
