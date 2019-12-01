@@ -16,7 +16,7 @@ def main(event, context):
 def pick_image ():
 
 	# Download YAML file
-	frames_data_url = "https://jacobysuh.github.io/communityscreens/frames-new.yaml"
+	frames_data_url = "https://jacobysuh.github.io/communityscreens/frames.yaml"
 	print("Downloading frame data from:", frames_data_url)
 	request = requests.get(frames_data_url)
 	if request.status_code != 200:
