@@ -68,14 +68,14 @@ def main():
         print("> mkdir", output_path)
         os.makedirs(output_path)
 
-    frames_metadata_file = "frames-2.yaml"
+    frames_metadata_file = "frames.yaml"
     frames_metadata = {}
     if os.path.exists(frames_metadata_file):
         print(frames_metadata_file, "already exists. Reading data from it.")
         with open(frames_metadata_file, "r") as f:
             frames_metadata = yaml.safe_load(f)
     
-    processing_metadata_file = "processing-2.yaml"
+    processing_metadata_file = "processing.yaml"
     processing_metadata = {}
     if os.path.exists(processing_metadata_file):
         print(processing_metadata_file, "already exists. Reading data from it.")

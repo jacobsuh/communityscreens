@@ -16,13 +16,12 @@ def main(event, context):
 def pick_image ():
 
 	# Download YAML file
-	frames_data_url = "https://jacobysuh.github.io/communityscreens/frames.yaml"
+	frames_data_url = "https://jacobysuh.github.io/communityscreens/frames-new.yaml"
 	print("Downloading frame data from:", frames_data_url)
 	request = requests.get(frames_data_url)
 	if request.status_code != 200:
-		print("Got status code:", request.status_code)
-		exit(1)
-
+		print("Error: Got status code:", request.status_code)
+		exit()
 
 	frames_write_location = "/tmp/frames.yaml"
 	print("Saving frame data to disk at:", frames_write_location)
@@ -51,15 +50,19 @@ def pick_image ():
 		pick_image()
 
 def publish (chosen_frame, tweet_text, image_url):
-	# # Authenticate to Twitter
-	# auth = tweepy.OAuthHandler("XXXXXXXXXXXXXXXXXXX", 
-	#     "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-	# auth.set_access_token("XXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXX", 
-	#     "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
-	# api = tweepy.API(auth)
+	# Authenticate to Twitter
+	auth = tweepy.OAuthHandler("XXXXXXXXXXXXXXXXXXX", 
+	    "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+	auth.set_access_token("XXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXXXXXXX", 
+	    "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+	api = tweepy.API(auth)
 
 	# Download picture and tweet
 	image_location = "/tmp/" + chosen_frame
+	
+	if not image_url:
+		print("Error: No image url found!")
+		exit()
 	
 	print("Downloading image from:", image_url)
 	request = requests.get(image_url, stream=True)
@@ -69,8 +72,8 @@ def publish (chosen_frame, tweet_text, image_url):
 				image.write(chunk)
 		
 		print("Publishing image with status:", tweet_text)
-		# api.update_with_media(image_location, status=tweet_text)		
-		# os.remove(image_location)
+		api.update_with_media(image_location, status=tweet_text)		
+		os.remove(image_location)
 	else:
 		print("Image cannot be downloaded")
 	
