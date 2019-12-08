@@ -72,12 +72,14 @@ class Subtitler():
         else:
             print("Passed credentials file at", creds_file)
             with open(creds_file, "r") as f:
-                creds = yaml.safe_load(creds_file)
+                creds = yaml.safe_load(f)
                 try:
                     self.username = creds['username']
                     self.password = creds['password']
-                except:
-                    print("Ensure OpenSubtitles credentials are passed with --open_subs_creds_file and is YAMl formatted with 'username' and 'password' keys.")
+                except KeyError as e:
+                    print("KeyError:", e)
+                    print("Ensure file with OpenSubtitles credentials is YAMl formatted with 'username' and 'password' keys.")
+                    return None
         
         self.ost_driver = OpenSubtitles()
         print(f"Logging into OpenSubtitles with username: {self.username}")
@@ -111,11 +113,12 @@ class Subtitler():
         else:
             print(f"Found {len(subs)} options, choosing best one.")
             # sort based on quality indicators of subtitles
-            subs_with_quality = [(sub.get("IDSubtitleFile"), int(not bool(sub.get('SubBad'))), float(sub.get("Score")), int(sub.get("SubFromTrusted")) ) for sub in subs]
+            subs_with_quality = [(sub.get("IDSubtitleFile"), int(not bool(int(sub.get('SubBad')))), float(sub.get("Score")), int(sub.get("SubFromTrusted")) ) for sub in subs]
             # returned results will be sorted first by whether they are good, followed by their score (descending), followed by whether they are from a trusted source
             subs_sorted_by_quality = sorted(sorted(sorted(subs_with_quality, key=lambda x : x[3]), key=lambda x : x[2], reverse=True), key=lambda x : x[1])
-            
-            id_subtitle_file = subs_sorted_by_quality[0][0]
+            best_subs = subs_sorted_by_quality[0]
+            print("Best subs: id =", best_subs[0], ", Quality: SubGood", best_subs[1], "Score", best_subs[2], "Trusted", best_subs[3])
+            id_subtitle_file = best_subs[0]
         
         res = self.ost_driver.download_subtitles([id_subtitle_file], output_directory=subtitle_output_directory, extension=subtitle_extension)
         subs_file = res.get(id_subtitle_file)
