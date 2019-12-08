@@ -7,9 +7,14 @@ import urllib.parse
 import argparse
 from pythonopensubtitles.opensubtitles import OpenSubtitles
 from pythonopensubtitles.utils import File
+import logging
+
+logger = logging.getLogger('process')
+log_level = "ERROR"
+logger.setLevel(logging.ERROR)
 
 def find_all_video_files(path, extension="mkv"):
-    print("Looking for video files in:", path)
+    logger.info("Looking for video files in:", path)
     mkv_video_files = glob.glob(os.path.join(path, f"*.{extension}"))
 
     all_files = glob.glob(os.path.join(path, "*"))
@@ -33,9 +38,12 @@ def ffmpeg(path, filters=[], filter_complex=None, args=[]):
     if filter_complex:
         command.append("-filter_complex")
         command.append(f"{filter_complex}")
+    global log_level
+    if log_level in ['INFO', 'WARNING', 'ERROR', 'CRITICAL']:
+        command.append("-hide_banner")
     for arg in args:
         command.append(arg)
-    print(">", " ".join(command))
+    logger.info("> " + " ".join(command))
     subprocess.call(command)
 
 def produce_frames_at_interval(path, capture_interval, output_pattern):
@@ -54,7 +62,7 @@ def produce_frames_at_interval_with_subtitles(path, capture_interval, subs_locat
 def produce_frames(path, output_pattern, capture_interval, complex_filter=None, filters=[""]):
     video_filters_str = ",".join(filters)
     command = ["ffmpeg", "-i", path, "-vf", f"fps=1/{capture_interval}", output_pattern]
-    print(">", " ".join(command))
+    logger.info("> " + " ".join(command))
     subprocess.call(command)
 
 class Subtitler():
@@ -70,27 +78,27 @@ class Subtitler():
                 self.username = username
                 self.password = password
         else:
-            print("Passed credentials file at", creds_file)
+            logger.debug("Passed credentials file at", creds_file)
             with open(creds_file, "r") as f:
                 creds = yaml.safe_load(f)
                 try:
                     self.username = creds['username']
                     self.password = creds['password']
                 except KeyError as e:
-                    print("KeyError:", e)
-                    print("Ensure file with OpenSubtitles credentials is YAMl formatted with 'username' and 'password' keys.")
+                    logger.error("KeyError:", e)
+                    logger.error("Ensure file with OpenSubtitles credentials is YAMl formatted with 'username' and 'password' keys.")
                     return None
         
         self.ost_driver = OpenSubtitles()
-        print(f"Logging into OpenSubtitles with username: {self.username}")
+        logger.info(f"Logging into OpenSubtitles with username: {self.username}")
         if self.ost_driver.login(self.username, self.password):
-            print("Log-in succeeded!")
+            logger.info("Log-in succeeded!")
         else:
-            print("Log-in failed with provided credentials.")
+            logger.error("Log-in failed with provided credentials.")
             return None
 
     def get_subtitles_for_file(self, video_file, language_id='eng', subtitle_output_directory="/tmp", subtitle_extension='srt'):
-        print(f"Searching for subtitles for file {video_file}")
+        logger.info(f"Searching for subtitles for file {video_file}")
         f = File(video_file)
 
         video_hash = f.get_hash()
@@ -105,19 +113,19 @@ class Subtitler():
                 ])
 
         if len(subs) == 0:
-            print("No subs found for video")
+            logger.error(f"No subs found for video {video_file}")
             return None
         elif len(subs) == 1:
-            print("Found exactly one subtitle match for video")
+            logger.info("Found exactly one subtitle match for video")
             id_subtitle_file = subs[0].get('IDSubtitleFile')
         else:
-            print(f"Found {len(subs)} options, choosing best one.")
+            logger.info(f"Found {len(subs)} options, choosing best one.")
             # sort based on quality indicators of subtitles
             subs_with_quality = [(sub.get("IDSubtitleFile"), int(not bool(int(sub.get('SubBad')))), float(sub.get("Score")), int(sub.get("SubFromTrusted")) ) for sub in subs]
             # returned results will be sorted first by whether they are good, followed by their score (descending), followed by whether they are from a trusted source
             subs_sorted_by_quality = sorted(sorted(sorted(subs_with_quality, key=lambda x : x[3]), key=lambda x : x[2], reverse=True), key=lambda x : x[1])
             best_subs = subs_sorted_by_quality[0]
-            print("Best subs: id =", best_subs[0], ", Quality: SubGood", best_subs[1], "Score", best_subs[2], "Trusted", best_subs[3])
+            logger.debug("Best subs: id =", best_subs[0], ", Quality: SubGood", best_subs[1], "Score", best_subs[2], "Trusted", best_subs[3])
             id_subtitle_file = best_subs[0]
         
         res = self.ost_driver.download_subtitles([id_subtitle_file], output_directory=subtitle_output_directory, extension=subtitle_extension)
@@ -138,6 +146,7 @@ def main():
     parser.add_argument("--subs_password", default=None, help="A password the can be used with the username passed with --subs_username to log-in to OpenSubtitles.org")
     parser.add_argument("--subs_format", default=None, help="A comma separated list of format options that would be passed to force_style in ffmpeg")
     parser.add_argument("--subs_format_file", default=None, help="A YAML file that specifies a dictionary of format that would be passed to force_style in ffmpeg")
+    parser.add_argument("--log", default='ERROR', help="The logging level to use; DEBUG, INFO, WARNING, ERROR, or CRITICAL")
 
     args = parser.parse_args()
 
@@ -154,6 +163,28 @@ def main():
     subs_format = args.subs_format
     subs_format_file = args.subs_format_file
 
+    log = args.log
+    global logger
+    global log_level
+
+    logging_options = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL']
+    if log not in logging_options:
+        logger.error(f"--logging must be one of {logging_options}")
+        exit(-1)
+    else:
+        log_level = log
+        if log_level == 'DEBUG':
+            logger.setLevel(logging.DEBUG)
+        elif log_level == 'INFO':
+            logger.setLevel(logging.INFO)
+        elif log_level == 'WARNING':
+            logger.setLevel(logging.WARNING)
+        elif log_level == 'ERROR':
+            logger.setLevel(logging.ERROR)
+        elif log_level == 'CRITICAL':
+            logger.setLevel(logging.CRITICAL)
+        logger.debug("Set log-level to {log_level}")
+
     if include_subtitles:
         if subs_creds_file:
             subs = Subtitler(creds_file=subs_creds_file)
@@ -161,10 +192,10 @@ def main():
             if subs_username and subs_password:
                 subs = Subtitler(username=subs_username, password=subs_password)
             else:
-                print("If including subtitles, ensure you start this script with either --subs_creds_file or both of --subs_username and --subs_password")
+                logging.error("If including subtitles, ensure you start this script with either --subs_creds_file or both of --subs_username and --subs_password")
                 exit(-1)
         if subs_format and subs_format_file:
-            print("Pass only one of --subs_format or --subs_format_file.")
+            logging.error("Pass only one of --subs_format or --subs_format_file.")
             exit(-1)
 
         subtitle_format_dict = {}
@@ -189,42 +220,42 @@ def main():
         parser.error("Must pass remote url for images with --remote_url or -u")
 
     if not os.path.exists(input_path) and os.path.isdir(input_path):
-        print(f"Error: folder {input_path} does not exist! Exiting...")
-        exit(1)
+        logging.error(f"Error: folder {input_path} does not exist! Exiting...")
+        exit(-11)
     
     video_files = find_all_video_files(input_path)
     
     if not os.path.exists(staging_path):
-        print("> mkdir", staging_path)
+        logging.info("> mkdir", staging_path)
         os.makedirs(staging_path)
     
     if not os.path.exists(output_path):
-        print("> mkdir", output_path)
+        logging.info("> mkdir", output_path)
         os.makedirs(output_path)
 
     frames_metadata_file = "frames.yaml"
     frames_metadata = {}
     if os.path.exists(frames_metadata_file):
-        print(frames_metadata_file, "already exists. Reading data from it.")
+        logging.info(frames_metadata_file, "already exists. Reading data from it.")
         with open(frames_metadata_file, "r") as f:
             frames_metadata = yaml.safe_load(f)
     
     processing_metadata_file = "processing.yaml"
     processing_metadata = {}
     if os.path.exists(processing_metadata_file):
-        print(processing_metadata_file, "already exists. Reading data from it.")
+        logging.info(processing_metadata_file, "already exists. Reading data from it.")
         with open(processing_metadata_file, "r") as f:
             processing_metadata = yaml.safe_load(f)
     else:
         processing_metadata['done'] = []
 
     for file in video_files:
-        print("Processing file:", file)
+        logging.info("Processing file:", file)
         filename = os.path.basename(file)
         video_name, extension = os.path.splitext(filename)
 
         if filename in processing_metadata['done']:
-            print("File already processed! Skipping...")
+            logging.info("File already processed! Skipping...")
             continue
 
         video_name_split = video_name.split("_")
@@ -256,7 +287,7 @@ def main():
             # move frame to final location
             url_safe_frame_name = urllib.parse.quote_plus(frame_name)
             destination_path = os.path.join(output_path, url_safe_frame_name)
-            print(f"> mv {frame_path} {destination_path}")
+            logging.info(f"> mv {frame_path} {destination_path}")
             shutil.move(frame_path, destination_path)
 
             # construct frame metadata
