@@ -272,6 +272,12 @@ def main():
         processing_metadata[filename]['subs'] = {}
         if subs:
             processing_metadata[filename]['subs']['enabled'] = True
+            
+            if subs_file:
+                processing_metadata[filename]['subs']['download_successful'] = True
+            else:
+                processing_metadata[filename]['subs']['download_successful'] = False
+            
             processing_metadata[filename]['subs']['format'] = subtitle_format_dict
         else:
             processing_metadata[filename]['subs']['enabled'] = False
