@@ -15,6 +15,10 @@ logger.setLevel(logging.ERROR)
 
 def find_all_video_files(path, extension="mkv"):
     logger.info("Looking for video files in:", path)
+    
+    if os.path.isfile(path):
+        return [path]
+    
     mkv_video_files = glob.glob(os.path.join(path, f"*.{extension}"))
 
     all_files = glob.glob(os.path.join(path, "*"))
