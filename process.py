@@ -268,7 +268,13 @@ def main():
         
         processing_metadata['done'].append(filename)
         processing_metadata[filename] = {}
-        processing_metadata[filename]['fps'] = capture_interval
+        processing_metadata[filename]['capture_interval'] = capture_interval
+        processing_metadata[filename]['subs'] = {}
+        if subs:
+            processing_metadata[filename]['subs']['enabled'] = True
+            processing_metadata[filename]['subs']['format'] = subtitle_format_dict
+        else:
+            processing_metadata[filename]['subs']['enabled'] = False
 
     with open(frames_metadata_file, "w") as f:
         f.write(yaml.safe_dump(frames_metadata))
