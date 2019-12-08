@@ -14,7 +14,7 @@ log_level = "ERROR"
 logger.setLevel(logging.ERROR)
 
 def find_all_video_files(path, extension="mkv"):
-    logger.info("Looking for video files in:", path)
+    logger.info(f"Looking for video files in: {path}")
     
     if os.path.isfile(path):
         return [path]
@@ -82,7 +82,7 @@ class Subtitler():
                 self.username = username
                 self.password = password
         else:
-            logger.debug("Passed credentials file at", creds_file)
+            logger.debug(f"Passed credentials file at {creds_file}")
             with open(creds_file, "r") as f:
                 creds = yaml.safe_load(f)
                 try:
@@ -129,7 +129,7 @@ class Subtitler():
             # returned results will be sorted first by whether they are good, followed by their score (descending), followed by whether they are from a trusted source
             subs_sorted_by_quality = sorted(sorted(sorted(subs_with_quality, key=lambda x : x[3]), key=lambda x : x[2], reverse=True), key=lambda x : x[1])
             best_subs = subs_sorted_by_quality[0]
-            logger.debug("Best subs: id =", best_subs[0], ", Quality: SubGood", best_subs[1], "Score", best_subs[2], "Trusted", best_subs[3])
+            logger.debug(f"Best subs: id = {best_subs[0]}, Quality: SubGood = {best_subs[1]}, Score = {best_subs[2]}, Trusted = {best_subs[3]}")
             id_subtitle_file = best_subs[0]
         
         res = self.ost_driver.download_subtitles([id_subtitle_file], output_directory=subtitle_output_directory, extension=subtitle_extension)
@@ -187,7 +187,7 @@ def main():
             logger.setLevel(logging.ERROR)
         elif log_level == 'CRITICAL':
             logger.setLevel(logging.CRITICAL)
-        logger.debug("Set log-level to {log_level}")
+        logger.debug(f"Set log-level to {log_level}")
 
     if include_subtitles:
         if subs_creds_file:
@@ -225,7 +225,7 @@ def main():
 
     if not os.path.exists(input_path) and os.path.isdir(input_path):
         logging.error(f"Error: folder {input_path} does not exist! Exiting...")
-        exit(-11)
+        exit(-1)
     
     video_files = find_all_video_files(input_path)
     
