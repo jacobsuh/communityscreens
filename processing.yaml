@@ -1,310 +1,864 @@
 Community_S01E01_Pilot.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: &id001 {Bold: 1, FontName: Arial, Fontsize: 18, Outline: 1, OutlineColor: '&H000000&',
+      Shadow: 1}
+    subs_file: /tmp/1952313008.srt
+    subs_id: '1952313008'
 Community_S01E02_Spanish_101.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952727134.srt
+    subs_id: '1952727134'
 Community_S01E03_Introduction_to_Film.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952198418.srt
+    subs_id: '1952198418'
 Community_S01E04_Social_Psychology.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952202068.srt
+    subs_id: '1952202068'
 Community_S01E05_Advanced_Criminal_Law.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952206649.srt
+    subs_id: '1952206649'
 Community_S01E06_Football_Feminism_and_You.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952210315.srt
+    subs_id: '1952210315'
 Community_S01E07_Introduction_to_Statistics.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952213892.srt
+    subs_id: '1952213892'
 Community_S01E08_Home_Economics.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952217567.srt
+    subs_id: '1952217567'
 Community_S01E09_Debate_109.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952222566.srt
+    subs_id: '1952222566'
 Community_S01E10_Environmental_Science.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952226959.srt
+    subs_id: '1952226959'
 Community_S01E11_The_Politics_of_Human_Sexuality.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952238151.srt
+    subs_id: '1952238151'
 Community_S01E12_Comparative_Religion.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952242528.srt
+    subs_id: '1952242528'
 Community_S01E13_Invetigative_Journalism.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952262136.srt
+    subs_id: '1952262136'
 Community_S01E14_Interpretive_Dance.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952266442.srt
+    subs_id: '1952266442'
 Community_S01E15_Romantic_Expressionism.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952274403.srt
+    subs_id: '1952274403'
 Community_S01E16_Communication_Studies.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952279553.srt
+    subs_id: '1952279553'
 Community_S01E17_Physical_Education.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952291480.srt
+    subs_id: '1952291480'
 Community_S01E18_Basic_Genealogy.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952295246.srt
+    subs_id: '1952295246'
 Community_S01E19_Beginner_Pottery.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952298535.srt
+    subs_id: '1952298535'
 Community_S01E20_The_Science_of_Illusion.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952319200.srt
+    subs_id: '1952319200'
 Community_S01E21_Contemporary_American_Poultry.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952312438.srt
+    subs_id: '1952312438'
 Community_S01E22_The_Art_of_Discourse.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952316813.srt
+    subs_id: '1952316813'
 Community_S01E23_Modern_Warfare.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952319908.srt
+    subs_id: '1952319908'
 Community_S01E24_English_as_a_Second_Language.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952323957.srt
+    subs_id: '1952323957'
 Community_S01E25_Pascal_s_Triangle_Revisited.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952328209.srt
+    subs_id: '1952328209'
 Community_S02E01_Anthropology_101.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952510643.srt
+    subs_id: '1952510643'
 Community_S02E02_Accounting_for_Lawyers.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952525619.srt
+    subs_id: '1952525619'
 Community_S02E03_The_Psychology_of_Letting_Go.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952539364.srt
+    subs_id: '1952539364'
 Community_S02E04_Basic_Rocket_Science.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952559573.srt
+    subs_id: '1952559573'
 Community_S02E06_Epidemiology.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952589883.srt
+    subs_id: '1952589883'
 Community_S02E07_Aerodynamics_of_Gender.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953382482.srt
+    subs_id: '1953382482'
 Community_S02E08_Cooperative_Calligraphy.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952620466.srt
+    subs_id: '1952620466'
 Community_S02E09_Conspiracy_Theories_and_Interior_Design.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952636723.srt
+    subs_id: '1952636723'
 Community_S02E10_Mixology_Certification.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952663513.srt
+    subs_id: '1952663513'
 Community_S02E12_Asian_Population_Studies.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952733111.srt
+    subs_id: '1952733111'
 Community_S02E13_Celebrity_Pharmacology.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952743951.srt
+    subs_id: '1952743951'
 Community_S02E15_Early_21st_Century_Romanticism.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952766143.srt
+    subs_id: '1952766143'
 Community_S02E16_Intermediate_Documentary_Filmmaking.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952777656.srt
+    subs_id: '1952777656'
 Community_S02E17_Intro_to_Political_Science.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952787944.srt
+    subs_id: '1952787944'
 Community_S02E18_Custody_Law_and_Eastern_European_Diplomacy.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952815737.srt
+    subs_id: '1952815737'
 Community_S02E19_Critical_Film_Studies.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952824417.srt
+    subs_id: '1952824417'
 Community_S02E20_Competitive_Wine_Tasting.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952843071.srt
+    subs_id: '1952843071'
 Community_S02E21_Paradigms_of_Human_Memory.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952846883.srt
+    subs_id: '1952846883'
 Community_S02E22_Applied_Anthropology_and_Culinary_Arts.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952850422.srt
+    subs_id: '1952850422'
 Community_S02E23_A_Fistful_of_Paintballs.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952854445.srt
+    subs_id: '1952854445'
 Community_S02E24_For_a_Few_Paintballs_More.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952857947.srt
+    subs_id: '1952857947'
 Community_S03E01_Biology_101.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952931478.srt
+    subs_id: '1952931478'
 Community_S03E03_Competitive_Ecology.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952940972.srt
+    subs_id: '1952940972'
 Community_S03E04_Remedial_Chaos_Theory.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952945757.srt
+    subs_id: '1952945757'
 Community_S03E05_Horror_Fiction_in_Seven_Spooky_Steps.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952955395.srt
+    subs_id: '1952955395'
 Community_S03E06_Advanced_Gay.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952960228.srt
+    subs_id: '1952960228'
 Community_S03E07_Studies_in_Modern_Movement.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952965486.srt
+    subs_id: '1952965486'
 Community_S03E08_Documentary_Filmmaking__Redux.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952970753.srt
+    subs_id: '1952970753'
 Community_S03E09_Foosball_and_Nocturnal_Vigilantism.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1952980009.srt
+    subs_id: '1952980009'
 Community_S03E11_Urban_Matrimony_and_the_Sandwich_Arts.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953056446.srt
+    subs_id: '1953056446'
 Community_S03E12_Contemporary_Impressionists.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953061709.srt
+    subs_id: '1953061709'
 Community_S03E13_Digital_Exploration_of_Interior_Design.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953066813.srt
+    subs_id: '1953066813'
 Community_S03E14_Pillows_and_Blankets.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953077400.srt
+    subs_id: '1953077400'
 Community_S03E15_Origins_of_Vampire_Mythology.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953082690.srt
+    subs_id: '1953082690'
 Community_S03E16_Virtual_Systems_Analysis.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953089837.srt
+    subs_id: '1953089837'
 Community_S03E18_Course_Listing_Unavailable.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953105464.srt
+    subs_id: '1953105464'
 Community_S03E19_Curriculum_Unavailable.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953111984.srt
+    subs_id: '1953111984'
 Community_S03E20_Digital_Estate_Planning.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953118883.srt
+    subs_id: '1953118883'
 Community_S03E21_The_First_Chang_Dynasty.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953118882.srt
+    subs_id: '1953118882'
 Community_S03E22_Introduction_to_Finality.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: false
+    enabled: true
+    format: *id001
 Community_S04E01_History_101.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953344615.srt
+    subs_id: '1953344615'
 Community_S04E02_Paranormal_Parentage.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953355919.srt
+    subs_id: '1953355919'
 Community_S04E03_Conventions_of_Space_and_Time.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953368706.srt
+    subs_id: '1953368706'
 Community_S04E04_Alternative_History_of_the_German_Invasion.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953380781.srt
+    subs_id: '1953380781'
 Community_S04E05_Cooperative_Escapism_in_Familial_Relations.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953394469.srt
+    subs_id: '1953394469'
 Community_S04E06_Advanced_Documentary_Filmmaking.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953423926.srt
+    subs_id: '1953423926'
 Community_S04E07_Economics_of_Marine_Biology.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953425566.srt
+    subs_id: '1953425566'
 Community_S04E08_Herstory_of_Dance.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953455973.srt
+    subs_id: '1953455973'
 Community_S04E09_Intro_to_Felt_Surrogacy.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953470215.srt
+    subs_id: '1953470215'
 Community_S04E10_Intro_to_Knots.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953483986.srt
+    subs_id: '1953483986'
 Community_S04E11_Basic_Human_Anatomy.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: false
+    enabled: true
+    format: *id001
 Community_S04E12_Heroic_Origins.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953510493.srt
+    subs_id: '1953510493'
 Community_S04E13_Advanced_Introduction_to_Finality.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1953522979.srt
+    subs_id: '1953522979'
 Community_S05E01_Repilot.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954068074.srt
+    subs_id: '1954068074'
 Community_S05E02_Introduction_to_Teaching.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954068075.srt
+    subs_id: '1954068075'
 Community_S05E03_Basic_Intergluteal_Numismatics.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: false
+    enabled: true
+    format: *id001
 Community_S05E04_Cooperative_Polygraphy.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954088665.srt
+    subs_id: '1954088665'
 Community_S05E05_Geothermal_Escapism.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954098394.srt
+    subs_id: '1954098394'
 Community_S05E06_Analysis_of_Cork-Based_Networking.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954107963.srt
+    subs_id: '1954107963'
 Community_S05E07_Bondage_and_Beta_Male_Sexuality.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954148377.srt
+    subs_id: '1954148377'
 Community_S05E08_App_Development_and_Condiments.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954158435.srt
+    subs_id: '1954158435'
 Community_S05E09_VCR_Maintenance_and_Educational_Publishing.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954169500.srt
+    subs_id: '1954169500'
 Community_S05E10_Advanced_Advanced_Dungeons_and_Dragons.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954190359.srt
+    subs_id: '1954190359'
 Community_S05E12_Basic_Story.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954208571.srt
+    subs_id: '1954208571'
 Community_S05E13_Basic_Sandwich.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954214457.srt
+    subs_id: '1954214457'
 Community_S06E01_Ladders.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954663187.srt
+    subs_id: '1954663187'
 Community_S06E02_Lawnmower_Maintenance_and_Postnatal_Care.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954663201.srt
+    subs_id: '1954663201'
 Community_S06E03_Basic_Crisis_Room_Decorum.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954671697.srt
+    subs_id: '1954671697'
 Community_S06E04_Queer_Studies_and_Advanced_Waxing.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954679885.srt
+    subs_id: '1954679885'
 Community_S06E05_Laws_of_Robotics_and_Party_Rights.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954689006.srt
+    subs_id: '1954689006'
 Community_S06E06_Basic_Email_Security.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: false
+    enabled: true
+    format: *id001
 Community_S06E07_Advanced_Safety_Feature.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954743861.srt
+    subs_id: '1954743861'
 Community_S06E08_Intro_to_Recycled_Cinema.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954754547.srt
+    subs_id: '1954754547'
 Community_S06E09_Grifting_101.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954743389.srt
+    subs_id: '1954743389'
 Community_S06E10_Basic_RV_Repair_and_Palmistry.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: false
+    enabled: true
+    format: *id001
 Community_S06E11_Modern_Espionage.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954758293.srt
+    subs_id: '1954758293'
 Community_S06E12_Wedding_Videography.mkv:
-  fps: '14'
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954765409.srt
+    subs_id: '1954765409'
 Community_S06E13_Emotional_Consequences_of_Broadcast_Television.mkv:
-  fps: '14'
-done:
-- Community_S05E06_Analysis_of_Cork-Based_Networking.mkv
-- Community_S05E13_Basic_Sandwich.mkv
-- Community_S05E03_Basic_Intergluteal_Numismatics.mkv
-- Community_S05E07_Bondage_and_Beta_Male_Sexuality.mkv
-- Community_S05E01_Repilot.mkv
-- Community_S05E05_Geothermal_Escapism.mkv
-- Community_S05E02_Introduction_to_Teaching.mkv
-- Community_S05E04_Cooperative_Polygraphy.mkv
-- Community_S05E10_Advanced_Advanced_Dungeons_and_Dragons.mkv
-- Community_S05E09_VCR_Maintenance_and_Educational_Publishing.mkv
-- Community_S05E12_Basic_Story.mkv
-- Community_S05E08_App_Development_and_Condiments.mkv
-- Community_S02E12_Asian_Population_Studies.mkv
-- Community_S02E24_For_a_Few_Paintballs_More.mkv
-- Community_S02E01_Anthropology_101.mkv
-- Community_S02E06_Epidemiology.mkv
-- Community_S02E18_Custody_Law_and_Eastern_European_Diplomacy.mkv
-- Community_S02E13_Celebrity_Pharmacology.mkv
-- Community_S02E03_The_Psychology_of_Letting_Go.mkv
-- Community_S02E07_Aerodynamics_of_Gender.mkv
-- Community_S02E17_Intro_to_Political_Science.mkv
-- Community_S02E19_Critical_Film_Studies.mkv
-- Community_S02E21_Paradigms_of_Human_Memory.mkv
-- Community_S02E04_Basic_Rocket_Science.mkv
-- Community_S02E15_Early_21st_Century_Romanticism.mkv
-- Community_S02E02_Accounting_for_Lawyers.mkv
-- Community_S02E20_Competitive_Wine_Tasting.mkv
-- Community_S02E10_Mixology_Certification.mkv
-- Community_S02E23_A_Fistful_of_Paintballs.mkv
-- Community_S02E22_Applied_Anthropology_and_Culinary_Arts.mkv
-- Community_S02E16_Intermediate_Documentary_Filmmaking.mkv
-- Community_S02E09_Conspiracy_Theories_and_Interior_Design.mkv
-- Community_S02E08_Cooperative_Calligraphy.mkv
-- Community_S03E05_Horror_Fiction_in_Seven_Spooky_Steps.mkv
-- Community_S03E09_Foosball_and_Nocturnal_Vigilantism.mkv
-- Community_S03E16_Virtual_Systems_Analysis.mkv
-- Community_S03E13_Digital_Exploration_of_Interior_Design.mkv
-- Community_S03E20_Digital_Estate_Planning.mkv
-- Community_S03E19_Curriculum_Unavailable.mkv
-- Community_S03E15_Origins_of_Vampire_Mythology.mkv
-- Community_S03E22_Introduction_to_Finality.mkv
-- Community_S03E06_Advanced_Gay.mkv
-- Community_S03E03_Competitive_Ecology.mkv
-- Community_S03E18_Course_Listing_Unavailable.mkv
-- Community_S03E01_Biology_101.mkv
-- Community_S03E12_Contemporary_Impressionists.mkv
-- Community_S03E04_Remedial_Chaos_Theory.mkv
-- Community_S03E11_Urban_Matrimony_and_the_Sandwich_Arts.mkv
-- Community_S03E08_Documentary_Filmmaking__Redux.mkv
-- Community_S03E07_Studies_in_Modern_Movement.mkv
-- Community_S03E14_Pillows_and_Blankets.mkv
-- Community_S03E21_The_First_Chang_Dynasty.mkv
-- Community_S04E06_Advanced_Documentary_Filmmaking.mkv
-- Community_S04E12_Heroic_Origins.mkv
-- Community_S04E11_Basic_Human_Anatomy.mkv
-- Community_S04E09_Intro_to_Felt_Surrogacy.mkv
-- Community_S04E13_Advanced_Introduction_to_Finality.mkv
-- Community_S04E08_Herstory_of_Dance.mkv
-- Community_S04E02_Paranormal_Parentage.mkv
-- Community_S04E03_Conventions_of_Space_and_Time.mkv
-- Community_S04E10_Intro_to_Knots.mkv
-- Community_S04E04_Alternative_History_of_the_German_Invasion.mkv
-- Community_S04E07_Economics_of_Marine_Biology.mkv
-- Community_S04E05_Cooperative_Escapism_in_Familial_Relations.mkv
-- Community_S04E01_History_101.mkv
-- Community_S01E05_Advanced_Criminal_Law.mkv
-- Community_S01E13_Invetigative_Journalism.mkv
-- Community_S01E20_The_Science_of_Illusion.mkv
-- Community_S01E12_Comparative_Religion.mkv
-- Community_S01E22_The_Art_of_Discourse.mkv
-- Community_S01E23_Modern_Warfare.mkv
-- Community_S01E09_Debate_109.mkv
-- Community_S01E04_Social_Psychology.mkv
-- Community_S01E08_Home_Economics.mkv
-- Community_S01E07_Introduction_to_Statistics.mkv
-- Community_S01E19_Beginner_Pottery.mkv
-- Community_S01E10_Environmental_Science.mkv
-- Community_S01E02_Spanish_101.mkv
-- Community_S01E03_Introduction_to_Film.mkv
-- Community_S01E18_Basic_Genealogy.mkv
-- Community_S01E25_Pascal_s_Triangle_Revisited.mkv
-- Community_S01E21_Contemporary_American_Poultry.mkv
-- Community_S01E01_Pilot.mkv
-- Community_S01E11_The_Politics_of_Human_Sexuality.mkv
-- Community_S01E24_English_as_a_Second_Language.mkv
-- Community_S01E16_Communication_Studies.mkv
-- Community_S01E15_Romantic_Expressionism.mkv
-- Community_S01E06_Football_Feminism_and_You.mkv
-- Community_S01E14_Interpretive_Dance.mkv
-- Community_S01E17_Physical_Education.mkv
-- Community_S06E03_Basic_Crisis_Room_Decorum.mkv
-- Community_S06E12_Wedding_Videography.mkv
-- Community_S06E13_Emotional_Consequences_of_Broadcast_Television.mkv
-- Community_S06E04_Queer_Studies_and_Advanced_Waxing.mkv
-- Community_S06E11_Modern_Espionage.mkv
-- Community_S06E01_Ladders.mkv
-- Community_S06E10_Basic_RV_Repair_and_Palmistry.mkv
-- Community_S06E05_Laws_of_Robotics_and_Party_Rights.mkv
-- Community_S06E06_Basic_Email_Security.mkv
-- Community_S06E09_Grifting_101.mkv
-- Community_S06E07_Advanced_Safety_Feature.mkv
-- Community_S06E08_Intro_to_Recycled_Cinema.mkv
-- Community_S06E02_Lawnmower_Maintenance_and_Postnatal_Care.mkv
+  capture_interval: '14'
+  subs:
+    download_successful: true
+    enabled: true
+    format: *id001
+    subs_file: /tmp/1954772661.srt
+    subs_id: '1954772661'
+done: [Community_S01E01_Pilot.mkv, Community_S01E02_Spanish_101.mkv, Community_S01E03_Introduction_to_Film.mkv,
+  Community_S01E04_Social_Psychology.mkv, Community_S01E05_Advanced_Criminal_Law.mkv,
+  Community_S01E06_Football_Feminism_and_You.mkv, Community_S01E07_Introduction_to_Statistics.mkv,
+  Community_S01E08_Home_Economics.mkv, Community_S01E09_Debate_109.mkv, Community_S01E10_Environmental_Science.mkv,
+  Community_S01E11_The_Politics_of_Human_Sexuality.mkv, Community_S01E12_Comparative_Religion.mkv,
+  Community_S01E13_Invetigative_Journalism.mkv, Community_S01E14_Interpretive_Dance.mkv,
+  Community_S01E15_Romantic_Expressionism.mkv, Community_S01E16_Communication_Studies.mkv,
+  Community_S01E17_Physical_Education.mkv, Community_S01E18_Basic_Genealogy.mkv, Community_S01E19_Beginner_Pottery.mkv,
+  Community_S01E20_The_Science_of_Illusion.mkv, Community_S01E21_Contemporary_American_Poultry.mkv,
+  Community_S01E22_The_Art_of_Discourse.mkv, Community_S01E23_Modern_Warfare.mkv,
+  Community_S01E24_English_as_a_Second_Language.mkv, Community_S01E25_Pascal_s_Triangle_Revisited.mkv,
+  Community_S02E01_Anthropology_101.mkv, Community_S02E02_Accounting_for_Lawyers.mkv,
+  Community_S02E03_The_Psychology_of_Letting_Go.mkv, Community_S02E04_Basic_Rocket_Science.mkv,
+  Community_S02E06_Epidemiology.mkv, Community_S02E07_Aerodynamics_of_Gender.mkv,
+  Community_S02E08_Cooperative_Calligraphy.mkv, Community_S02E09_Conspiracy_Theories_and_Interior_Design.mkv,
+  Community_S02E10_Mixology_Certification.mkv, Community_S02E12_Asian_Population_Studies.mkv,
+  Community_S02E13_Celebrity_Pharmacology.mkv, Community_S02E15_Early_21st_Century_Romanticism.mkv,
+  Community_S02E16_Intermediate_Documentary_Filmmaking.mkv, Community_S02E17_Intro_to_Political_Science.mkv,
+  Community_S02E18_Custody_Law_and_Eastern_European_Diplomacy.mkv, Community_S02E19_Critical_Film_Studies.mkv,
+  Community_S02E20_Competitive_Wine_Tasting.mkv, Community_S02E21_Paradigms_of_Human_Memory.mkv,
+  Community_S02E22_Applied_Anthropology_and_Culinary_Arts.mkv, Community_S02E23_A_Fistful_of_Paintballs.mkv,
+  Community_S02E24_For_a_Few_Paintballs_More.mkv, Community_S03E01_Biology_101.mkv,
+  Community_S03E03_Competitive_Ecology.mkv, Community_S03E04_Remedial_Chaos_Theory.mkv,
+  Community_S03E05_Horror_Fiction_in_Seven_Spooky_Steps.mkv, Community_S03E06_Advanced_Gay.mkv,
+  Community_S03E07_Studies_in_Modern_Movement.mkv, Community_S03E08_Documentary_Filmmaking__Redux.mkv,
+  Community_S03E09_Foosball_and_Nocturnal_Vigilantism.mkv, Community_S03E11_Urban_Matrimony_and_the_Sandwich_Arts.mkv,
+  Community_S03E12_Contemporary_Impressionists.mkv, Community_S03E13_Digital_Exploration_of_Interior_Design.mkv,
+  Community_S03E14_Pillows_and_Blankets.mkv, Community_S03E15_Origins_of_Vampire_Mythology.mkv,
+  Community_S03E16_Virtual_Systems_Analysis.mkv, Community_S03E18_Course_Listing_Unavailable.mkv,
+  Community_S03E19_Curriculum_Unavailable.mkv, Community_S03E20_Digital_Estate_Planning.mkv,
+  Community_S03E21_The_First_Chang_Dynasty.mkv, Community_S03E22_Introduction_to_Finality.mkv,
+  Community_S04E01_History_101.mkv, Community_S04E02_Paranormal_Parentage.mkv, Community_S04E03_Conventions_of_Space_and_Time.mkv,
+  Community_S04E04_Alternative_History_of_the_German_Invasion.mkv, Community_S04E05_Cooperative_Escapism_in_Familial_Relations.mkv,
+  Community_S04E06_Advanced_Documentary_Filmmaking.mkv, Community_S04E07_Economics_of_Marine_Biology.mkv,
+  Community_S04E08_Herstory_of_Dance.mkv, Community_S04E09_Intro_to_Felt_Surrogacy.mkv,
+  Community_S04E10_Intro_to_Knots.mkv, Community_S04E11_Basic_Human_Anatomy.mkv, Community_S04E12_Heroic_Origins.mkv,
+  Community_S04E13_Advanced_Introduction_to_Finality.mkv, Community_S05E01_Repilot.mkv,
+  Community_S05E02_Introduction_to_Teaching.mkv, Community_S05E03_Basic_Intergluteal_Numismatics.mkv,
+  Community_S05E04_Cooperative_Polygraphy.mkv, Community_S05E05_Geothermal_Escapism.mkv,
+  Community_S05E06_Analysis_of_Cork-Based_Networking.mkv, Community_S05E07_Bondage_and_Beta_Male_Sexuality.mkv,
+  Community_S05E08_App_Development_and_Condiments.mkv, Community_S05E09_VCR_Maintenance_and_Educational_Publishing.mkv,
+  Community_S05E10_Advanced_Advanced_Dungeons_and_Dragons.mkv, Community_S05E12_Basic_Story.mkv,
+  Community_S05E13_Basic_Sandwich.mkv, Community_S06E01_Ladders.mkv, Community_S06E02_Lawnmower_Maintenance_and_Postnatal_Care.mkv,
+  Community_S06E03_Basic_Crisis_Room_Decorum.mkv, Community_S06E04_Queer_Studies_and_Advanced_Waxing.mkv,
+  Community_S06E05_Laws_of_Robotics_and_Party_Rights.mkv, Community_S06E06_Basic_Email_Security.mkv,
+  Community_S06E07_Advanced_Safety_Feature.mkv, Community_S06E08_Intro_to_Recycled_Cinema.mkv,
+  Community_S06E09_Grifting_101.mkv, Community_S06E10_Basic_RV_Repair_and_Palmistry.mkv,
+  Community_S06E11_Modern_Espionage.mkv, Community_S06E12_Wedding_Videography.mkv,
+  Community_S06E13_Emotional_Consequences_of_Broadcast_Television.mkv]
