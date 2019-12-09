@@ -8,6 +8,7 @@ import argparse
 from pythonopensubtitles.opensubtitles import OpenSubtitles
 from pythonopensubtitles.utils import File
 import logging
+import time
 
 logger = logging.getLogger('process')
 log_level = "ERROR"
@@ -89,7 +90,7 @@ class Subtitler():
                     self.username = creds['username']
                     self.password = creds['password']
                 except KeyError as e:
-                    logger.error("KeyError:", e)
+                    logger.error("KeyError: " + str(e))
                     logger.error("Ensure file with OpenSubtitles credentials is YAMl formatted with 'username' and 'password' keys.")
                     return None
         
@@ -101,20 +102,47 @@ class Subtitler():
             logger.error("Log-in failed with provided credentials.")
             return None
 
-    def get_subtitles_for_file(self, video_file, language_id='eng', subtitle_output_directory="/tmp", subtitle_extension='srt'):
+    def get_subtitles_for_file(self, video_file, language_id='eng', subtitle_output_directory="/tmp", subtitle_extension='srt', episode=None, season=None):
         logger.info(f"Searching for subtitles for file {video_file}")
         f = File(video_file)
 
         video_hash = f.get_hash()
         video_size = f.size
 
-        subs = self.ost_driver.search_subtitles([
-                    {
-                        'sublanguageid': language_id, 
-                        'moviehash': video_hash, 
-                        'moviebytesize': video_size
-                    }
-                ])
+        query = {
+                    'sublanguageid': language_id, 
+                    'moviehash': video_hash, 
+                    'moviebytesize': video_size
+        }
+        
+        if episode:
+            query['episode'] = episode
+        
+        if season:
+            query['season number'] = season
+
+        logger.debug("Sending OpenSubtitles Query:" + yaml.safe_dump(query))
+        
+        subs = None
+        
+        count = 0
+        max_count = 10
+        while count < max_count:
+            time_to_sleep = (count + 1)
+            count += 1
+            try:
+                subs = self.ost_driver.search_subtitles([query])
+                break
+            except Exception as e:
+                logger.error("Error while searching for subtitles")
+                logger.error("Exception: " + str(e))
+                logger.error(f"Trying again in {time_to_sleep} seconds...")
+                time.sleep(time_to_sleep)
+                continue
+
+        if subs is None:
+            logger.error(f"Timed out searching for subs for video {video_file}")
+            return None
 
         if len(subs) == 0:
             logger.error(f"No subs found for video {video_file}")
@@ -275,7 +303,7 @@ def main():
         # let's us keep track of the output of a single produce_frames call
         out_location = os.path.join(staging_path, out_pattern)
         if subs:
-            subs_file = subs.get_subtitles_for_file(file)
+            subs_file = subs.get_subtitles_for_file(file, episode=int(episode), season=int(season))
             if subs_file:
                 produce_frames_at_interval_with_subtitles(file, capture_interval, subs_file, subtitle_format_dict, out_location)
             else:
@@ -303,6 +331,8 @@ def main():
             frame_data['url'] = os.path.join(remote_url, url_safe_frame_name)
 
             frames_metadata[url_safe_frame_name] = frame_data
+
+            logger.debug("Added entry to frames metadata:\n" + yaml.safe_dump(frames_metadata[url_safe_frame_name]))
         
         processing_metadata['done'].append(filename)
         processing_metadata[filename] = {}
@@ -313,12 +343,17 @@ def main():
             
             if subs_file:
                 processing_metadata[filename]['subs']['download_successful'] = True
+                processing_metadata[filename]['subs']['subs_file'] = subs_file
+                subs_id, ext = os.path.splitext(os.path.basename(subs_file))
+                processing_metadata[filename]['subs']['subs_id'] = subs_id
             else:
                 processing_metadata[filename]['subs']['download_successful'] = False
             
             processing_metadata[filename]['subs']['format'] = subtitle_format_dict
         else:
             processing_metadata[filename]['subs']['enabled'] = False
+        
+        logger.debug("Added entry to processing metadata:\n" + yaml.safe_dump(processing_metadata[filename]))
 
     with open(frames_metadata_file, "w") as f:
         f.write(yaml.safe_dump(frames_metadata))
